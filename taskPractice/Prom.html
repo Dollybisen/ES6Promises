@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function prom(Complete) {
+            return new Promise(function (resolve, reject) {
+                console.log("Feching data, please wait.");
+                setTimeout(() => {
+                    if (Complete) {
+                        resolve(" I am succesful.");
+                    } else {
+                        reject("I am failed.");
+                    }
+                }, 3000)
+            });
+        }
+        prom(true).then((result) => {
+            console.log(result);
+        }).catch((Error) => {
+            console.log(Error);
+        });
+    </script>
+</body>
+
+</html>

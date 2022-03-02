@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function prom(Complete) {
+            return new Promise(function (resolve, reject) {
+                console.log("Fecthing data,please wait.")
+                setTimeout(() => {
+                    if (Complete) {
+                        resolve(" i am successfull.");
+                    } else {
+                        reject(" I am failed.");
+                    }
+                }, 3000)
+            });
+        }
+        let onfulfilment = (result) => {
+            console.log(result);
+        }
+        let onRejection = (error) => {
+            console.log(error);
+        }
+        prom(false).then(onfulfilment).catch(onRejection);
+    </script>
+
+</body>
+
+</html>

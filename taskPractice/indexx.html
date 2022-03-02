@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function myDisplayer(some) {
+            document.write(some);
+        }
+
+        let myPromise = new Promise(function (myResolve, myReject) {
+            let x = 2;
+            if (x == 2) {
+
+                myResolve("OK");
+            } else {
+                myReject("Error");
+            }
+
+            let y = 2;
+            if (y == 6) {
+
+                myResolve("OK");
+            } else {
+                myReject("Error");
+            }
+        });
+
+        myPromise.then(
+            function (value) { myDisplayer(value); },
+            function (error) { myDisplayer(error); }
+        );
+    </script>
+</body>
+
+</html>

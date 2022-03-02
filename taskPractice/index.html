@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Promises</title>
+</head>
+
+<body>
+    <script>
+        let Complete = true;
+        // let Complete= false
+
+        let prom = new Promise(function (Resolve, Reject) {
+            if (Complete) {
+                Resolve("i am succesfull.");
+            } else {
+                Reject("i am failed.");
+            }
+        });
+        console.log(prom);
+    </script>
+
+</body>
+
+</html>
